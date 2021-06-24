@@ -1,0 +1,13 @@
+[Unit]
+Description="video taking service"
+After=time-sync.target
+
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /opt/utils/take_video.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=basic.target
